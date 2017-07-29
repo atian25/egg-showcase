@@ -18,4 +18,11 @@ describe('test/app/controller/home.test.js', () => {
       .expect('hi, egg')
       .expect(200);
   });
+
+  it('should load plugin controoler', () => {
+    return app.httpRequest()
+      .get('/test')
+      .expect('plugin controller')
+      .expect(200);
+  });
 });
