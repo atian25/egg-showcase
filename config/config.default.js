@@ -4,7 +4,7 @@ module.exports = appInfo => {
   const config = {};
 
   // should change to your own
-  config.keys = appInfo.name + '_1500951971052_5271';
+  config.keys = appInfo.name + '_1501832752131_9495';
 
   // add your config here
 
