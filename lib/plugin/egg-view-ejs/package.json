@@ -1,6 +1,6 @@
 {
   "name": "share-plugin",
   "eggPlugin": {
-    "name": "share"
+    "name": "ejs"
   }
 }

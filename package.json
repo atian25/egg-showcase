@@ -1,11 +1,15 @@
 {
   "name": "showcase",
+  "egg": {
+    "framework": "yadan"
+  },
   "version": "1.0.0",
   "description": "",
   "private": true,
   "dependencies": {
     "egg": "^1.7.0",
-    "egg-scripts": "^1.0.0"
+    "egg-scripts": "^1.0.0",
+    "ejs": "^2.5.7"
   },
   "devDependencies": {
     "autod": "^2.9.0",
