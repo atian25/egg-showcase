@@ -7,6 +7,12 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1501832752131_9495';
 
   // add your config here
+  config.view = {
+    defaultViewEngine: 'nunjucks',
+    mapping: {
+      '.nj': 'nunjucks',
+    },
+  };
 
   return config;
 };
