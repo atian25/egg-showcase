@@ -1,10 +1,10 @@
 'use strict';
 
-const Controller = require('egg').Controller;
+const Controller = require('../core/controller');
 
 class HomeController extends Controller {
   async index() {
-    await this.ctx.render('home.tpl', { name: 'egg' });
+    this.echo('egg');
   }
 }
 
