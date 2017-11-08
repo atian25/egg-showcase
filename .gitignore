@@ -8,4 +8,5 @@ run/
 *.swp
 .vscode
 !node_modules/egg-test/**
+!node_modules/yadan/**
 

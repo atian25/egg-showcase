@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "dependencies": {
-    "egg": "^1.10.1",
+    "egg": "^1.11.0",
     "egg-scripts": "^2.1.0",
     "egg-view-nunjucks": "^2.1.4"
   },

@@ -11,7 +11,6 @@ class HomeController extends Controller {
 
   async echo() {
     this.service.news.list();
-    this.service.game.list();
   }
 }
 
