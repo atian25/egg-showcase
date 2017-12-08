@@ -1,5 +1,7 @@
 'use strict';
 
+const path = require('path');
+
 module.exports = appInfo => {
   const config = {};
 
@@ -17,6 +19,22 @@ module.exports = appInfo => {
 
   config.security = {
 
+  };
+
+  config.customLogger = {
+    dbLogger: {
+      file: path.join(appInfo.root, 'logs/db.log'),
+      formatter(meta) {
+        return `${meta.level}|${meta.date}|${meta.message}`;
+      },
+    },
+  };
+
+  config.logrotator = {
+    filesRotateBySize: [
+      path.join(appInfo.root, 'logs/db.log'),
+    ],
+    maxFileSize: 1024,
   };
 
   return config;
