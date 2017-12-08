@@ -12,10 +12,15 @@ describe('test/app/controller/home.test.js', () => {
     // yield ctx.service.xx();
   });
 
-  it('should GET /', () => {
-    return app.httpRequest()
+  it('should GET /', function* () {
+    yield app.httpRequest()
       .get('/')
-      .expect('hi, egg')
+      .expect(/adminUrls: \/admin\/url/)
+      .expect(200);
+
+    yield app.httpRequest()
+      .get('/admin/url')
+      .expect(/hi resource/)
       .expect(200);
   });
 });
