@@ -5,16 +5,18 @@
   "private": true,
   "dependencies": {
     "egg": "^2.0.0",
-    "egg-scripts": "^2.2.0",
+    "egg-scripts": "^2.4.0",
     "egg-view-nunjucks": "^2.1.4"
   },
   "devDependencies": {
+    "assert-extends": "^1.0.1",
     "autod": "^3.0.1",
     "autod-egg": "^1.0.0",
-    "egg-bin": "^4.3.5",
+    "egg-bin": "^4.3.6",
     "egg-ci": "^1.8.0",
+    "egg-instrument": "^2.0.0",
     "egg-mock": "^3.13.1",
-    "eslint": "^4.11.0",
+    "eslint": "^4.12.1",
     "eslint-config-egg": "^5.1.1",
     "webstorm-disable-index": "^1.2.0"
   },
