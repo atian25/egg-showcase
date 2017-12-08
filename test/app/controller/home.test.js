@@ -1,6 +1,7 @@
 'use strict';
 
-const { app, assert } = require('egg-mock/bootstrap');
+const { app, assert, mock } = require('egg-mock/bootstrap');
+const Controller = require('../../../app/core/controller');
 
 describe('test/app/controller/home.test.js', () => {
 
@@ -13,9 +14,12 @@ describe('test/app/controller/home.test.js', () => {
   });
 
   it('should GET /', () => {
+    mock(Controller.prototype, 'echo', function(name) {
+      this.ctx.body = `hi, mock ${name}`;
+    });
     return app.httpRequest()
       .get('/')
-      .expect('hi, egg')
+      .expect('hi, mock egg')
       .expect(200);
   });
 });
