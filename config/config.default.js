@@ -11,7 +11,12 @@ module.exports = appInfo => {
     defaultViewEngine: 'nunjucks',
     mapping: {
       '.nj': 'nunjucks',
+      '.tpl': 'nunjucks',
     },
+  };
+
+  config.security = {
+
   };
 
   return config;
