@@ -4,7 +4,8 @@ const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
   async index() {
-    await this.ctx.render('home.tpl', { name: 'egg' });
+    const result = await this.ctx.service.test.echo();
+    await this.ctx.render('home.tpl', { name: result || 'egg' });
   }
 }
 
