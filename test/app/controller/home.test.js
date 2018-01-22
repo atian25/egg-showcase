@@ -13,9 +13,14 @@ describe('test/app/controller/home.test.js', () => {
   });
 
   it('should GET /', () => {
+    app.get('/test/a', async (ctx, next) => {
+      ctx.somekey = 2333;
+      await next();
+    }, app.controller.home.index);
+
     return app.httpRequest()
-      .get('/')
-      .expect('hi, egg')
+      .get('/test/a')
+      .expect('hi, egg2333')
       .expect(200);
   });
 });
