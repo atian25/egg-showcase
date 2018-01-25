@@ -19,5 +19,7 @@ module.exports = appInfo => {
 
   };
 
+  config.middleware = [ 'ua' ];
+
   return config;
 };
