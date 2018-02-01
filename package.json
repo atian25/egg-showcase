@@ -6,7 +6,8 @@
   "dependencies": {
     "egg": "^2.0.0",
     "egg-scripts": "^2.4.0",
-    "egg-view-nunjucks": "^2.1.4"
+    "egg-view-nunjucks": "^2.1.4",
+    "replify": "^1.2.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",
@@ -17,12 +18,14 @@
     "egg-mock": "^3.13.1",
     "eslint": "^4.12.1",
     "eslint-config-egg": "^5.1.1",
+    "repl-client": "^0.3.0",
     "webstorm-disable-index": "^1.2.0"
   },
   "engines": {
     "node": ">=8.9.0"
   },
   "scripts": {
+    "console": "rc //tmp/repl/egg-repl.sock",
     "start": "egg-scripts start",
     "stop": "egg-scripts stop",
     "dev": "egg-bin dev",
