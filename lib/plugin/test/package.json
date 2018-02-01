@@ -1,0 +1,9 @@
+{
+  "name": "test-plugin",
+  "eggPlugin": {
+    "name": "test",
+    "dependencies": [
+      "share"
+    ]
+  }
+}

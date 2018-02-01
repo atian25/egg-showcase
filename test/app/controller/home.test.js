@@ -8,8 +8,9 @@ describe('test/app/controller/home.test.js', () => {
     const pkg = require('../../../package.json');
     assert(app.config.keys.startsWith(pkg.name));
 
-    // const ctx = app.mockContext({});
-    // yield ctx.service.xx();
+    const ctx = app.mockContext({});
+    assert(ctx.service.share.sayHi() === 'hi, share');
+    assert(ctx.service.test.sayHi() === 'hi, test');
   });
 
   it('should GET /', () => {
