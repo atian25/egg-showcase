@@ -16,7 +16,8 @@
       "console": "integratedTerminal",
       "restart": true,
       "protocol": "auto",
-      "port": 9999
+      "autoAttachChildProcesses": true,
+      "port": 9229
     },
     {
       "type": "node",
