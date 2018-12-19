@@ -1,8 +1,8 @@
 ---
 name: Custom issue template
-about: 这是一个测试
-title: ''
-labels: bug, duplicate
+about: xxxx
+title: "[Feature Request] say something"
+labels: ''
 assignees: ''
 
 ---
