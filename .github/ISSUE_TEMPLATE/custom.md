@@ -1,10 +1,10 @@
 ---
 name: Custom issue template
-about: Describe this issue template's purpose here.
+about: 这是一个测试
 title: ''
 labels: ''
 assignees: ''
 
 ---
 
-
+测试测试
