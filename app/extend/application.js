@@ -17,7 +17,7 @@ class ContextLogger {
 
   contextFormatter(meta) {
     const { ctx, date, level, pid, message } = meta;
-    return `[${date}] [${level}] [${pid}] [${ctx.url}] ${message}`;
+    return `[${date}] [${pid}] [${level}] [${ctx.url}] ${message}`;
   }
 }
 
@@ -26,7 +26,7 @@ class ContextLogger {
   ContextLogger.prototype[level] = function() {
     const meta = {
       ctx: this.ctx,
-      formatter: this.contextFormatter,
+      formatter: this._logger.options.contextFormatter || this.contextFormatter,
     };
     this._logger.log(LEVEL, arguments, meta);
   };

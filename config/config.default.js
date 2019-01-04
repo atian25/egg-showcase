@@ -22,5 +22,15 @@ module.exports = appInfo => {
     },
   };
 
+  config.customLogger = {
+    testLogger: {
+      file: 'test.log',
+      contextFormatter(meta) {
+        const { ctx, date, level, pid, message } = meta;
+        return `[TestLogger] [${pid}] [${date}] [${level}] [${ctx.url}] ${message}`;
+      },
+    },
+  };
+
   return config;
 };
