@@ -16,7 +16,10 @@ module.exports = appInfo => {
   };
 
   config.security = {
-
+    // only for test purpose
+    csrf: {
+      enable: false,
+    },
   };
 
   return config;
