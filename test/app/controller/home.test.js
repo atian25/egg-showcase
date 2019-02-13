@@ -18,4 +18,18 @@ describe('test/app/controller/home.test.js', () => {
       .expect('hi, egg')
       .expect(200);
   });
+
+  it('should GET /static/1.js', () => {
+    return app.httpRequest()
+      .get('/static/1.js')
+      .expect(/console.log\('static'\)/)
+      .expect(200);
+  });
+
+  it('should GET /public/2.js', () => {
+    return app.httpRequest()
+      .get('/public/2.js')
+      .expect(/console.log\('public'\)/)
+      .expect(200);
+  });
 });
