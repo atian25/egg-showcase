@@ -1,4 +1,4 @@
-# showcase
+# egg-showcase
 
 
 
