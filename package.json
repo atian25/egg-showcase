@@ -18,6 +18,7 @@
     "egg-mock": "^3.21.0",
     "eslint": "^5.11.1",
     "eslint-config-egg": "^7.1.0",
+    "moment": "^2.24.0",
     "webstorm-disable-index": "^1.2.0"
   },
   "engines": {

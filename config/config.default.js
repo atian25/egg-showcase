@@ -22,5 +22,16 @@ module.exports = appInfo => {
     },
   };
 
+  // custom sub logger config
+  config.subLogger = {
+    level: 'INFO',
+    formatter(meta) {
+      return `[${meta.logName}] ${meta.message}`;
+    },
+    contextFormatter(meta) {
+      return `[${meta.logName}] [Context] ${meta.message}`;
+    },
+  };
+
   return config;
 };
