@@ -14,6 +14,7 @@
         "debug"
       ],
       "console": "integratedTerminal",
+      "autoAttachChildProcesses": true,
       "restart": true,
       "protocol": "auto",
       "port": 9999
@@ -29,45 +30,9 @@
         "--",
         "--inspect-brk"
       ],
+      "disableOptimisticBPs": true,
       "protocol": "auto",
       "port": 9229
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Attach Master",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": [
-        "run",
-        "debug",
-        "--",
-        "--inspect-brk"
-      ],
-      "protocol": "inspector",
-      "port": 9229
-    },
-    {
-      "type": "node",
-      "request": "attach",
-      "name": "Attach Agent",
-      "protocol": "inspector",
-      "restart": true,
-      "port": 5800
-    },
-    {
-      "type": "node",
-      "request": "attach",
-      "name": "Attach Worker",
-      "protocol": "inspector",
-      "restart": true,
-      "timeout": 36000000,
-      "port": 9999
-    }
-  ],
-  "compounds": [
-    {
-      "name": "Egg Debug with brk",
-      "configurations": [ "Attach Master", "Attach Agent", "Attach Worker" ]
     }
   ]
 }
