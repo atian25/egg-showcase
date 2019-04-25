@@ -2,11 +2,14 @@
 
 const path = require('path');
 
-exports.share = {
-  path: path.join(__dirname, '../lib/plugin/share'),
-};
-
-exports.nunjucks = {
-  enable: true,
-  package: 'egg-view-nunjucks',
+/** @type Egg.EggPlugin */
+module.exports = {
+  nunjucks: {
+    enable: true,
+    package: 'egg-view-nunjucks',
+  },
+  share: {
+    enable: true,
+    path: path.join(__dirname, '../lib/plugin/share'),
+  },
 };

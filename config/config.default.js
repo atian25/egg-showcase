@@ -1,12 +1,20 @@
+/* eslint valid-jsdoc: "off" */
+
 'use strict';
 
+/**
+ * @param {Egg.EggAppInfo} appInfo app info
+ */
 module.exports = appInfo => {
-  const config = {};
+  /**
+   * built-in config
+   * @type {Egg.EggAppConfig}
+   **/
+  const config = exports = {};
 
-  // should change to your own
-  config.keys = appInfo.name + '_1501832752131_9495';
+  // use for cookie sign key, should change to your own and keep security
+  config.keys = appInfo.name + '_1556156913732_2632';
 
-  // add your config here
   config.view = {
     defaultViewEngine: 'nunjucks',
     mapping: {
@@ -22,5 +30,17 @@ module.exports = appInfo => {
     },
   };
 
-  return config;
+  // add your middleware config here
+  config.middleware = [];
+
+
+  // add your user config here
+  const userConfig = {
+    // myAppName: 'egg',
+  };
+
+  return {
+    ...config,
+    ...userConfig,
+  };
 };
