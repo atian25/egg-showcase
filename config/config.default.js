@@ -33,6 +33,14 @@ module.exports = appInfo => {
   // add your middleware config here
   config.middleware = [];
 
+  config.multipart = {
+    mode: 'file',
+    ignore: '/proxy',
+  };
+
+  config.bodyParser = {
+    ignore: '/proxy',
+  };
 
   // add your user config here
   const userConfig = {
