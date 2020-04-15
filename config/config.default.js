@@ -33,6 +33,11 @@ module.exports = appInfo => {
   // add your middleware config here
   config.middleware = [];
 
+  config.multipart = {
+    // mode: 'file',
+    fileSize: '1kb',
+    fileExtensions: [ '.js', '.json', '.md', '.pdf' ],
+  };
 
   // add your user config here
   const userConfig = {
