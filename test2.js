@@ -1,8 +1,5 @@
 
 'use strict';
-
-const Test = require('./test1');
-
 const { Session } = require('inspector');
 const { promisify } = require('util');
 const { mkdirp, rimraf } = require('mz-modules');
@@ -27,8 +24,16 @@ async function run() {
   a();
 
   session.connect();
+
+  // const Test = require('./test1');
+
   await session.post('Profiler.enable');
+
+  // const Test = require('./test1');
+
   await session.post('Profiler.startPreciseCoverage', { callCount: true, detailed: true });
+
+  const Test = require('./test1');
 
   b();
 
