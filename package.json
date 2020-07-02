@@ -37,11 +37,12 @@
     "autod": "autod"
   },
   "ci": {
-    "version": "10"
+    "version": "10",
+    "type": "github"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:atian25/egg-showcase.git"
   },
   "author": "TZ <atian25@qq.com>",
   "license": "MIT"

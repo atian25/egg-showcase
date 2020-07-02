@@ -3,15 +3,15 @@
 const { app, assert } = require('egg-mock/bootstrap');
 
 describe('test/app/controller/home.test.js', () => {
-  it('should assert', () => {
+  it('should assert', async () => {
     const pkg = require('../../../package.json');
     assert(app.config.keys.startsWith(pkg.name));
 
     // const ctx = app.mockContext({});
-    // yield ctx.service.xx();
+    // await ctx.service.xx();
   });
 
-  it('should GET /', () => {
+  it('should GET /', async () => {
     return app.httpRequest()
       .get('/')
       .expect('hi, egg')

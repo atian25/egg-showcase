@@ -17,7 +17,7 @@
       "autoAttachChildProcesses": true,
       "restart": true,
       "protocol": "auto",
-      "port": 9999
+      "port": 9229
     },
     {
       "type": "node",
