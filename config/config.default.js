@@ -23,6 +23,10 @@ module.exports = appInfo => {
     },
   };
 
+  config.development = {
+    watchDirs: [ './lib' ],
+  };
+
   config.security = {
     // only for test purpose
     csrf: {

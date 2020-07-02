@@ -1,0 +1,6 @@
+{
+  "name": "egg-coverage",
+  "eggPlugin": {
+    "name": "coverage"
+  }
+}

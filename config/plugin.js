@@ -12,4 +12,8 @@ module.exports = {
     enable: true,
     path: path.join(__dirname, '../lib/plugin/share'),
   },
+  coverage: {
+    enable: true,
+    path: path.join(__dirname, '../lib/plugin/egg-coverage'),
+  },
 };
