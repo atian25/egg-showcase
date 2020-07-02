@@ -4,7 +4,26 @@
   "description": "showcase for egg issue",
   "private": true,
   "egg": {
-    "declarations": true
+    "declarations": true,
+    "tsHelper": {
+      "watchDirs": {
+        "enum": {
+          "enabled": true,
+          "directory": "app/enum",
+          "declareTo": "Application.enum"
+        },
+        "utils": {
+          "enabled": true,
+          "directory": "app/utils",
+          "declareTo": "Application.utils"
+        },
+        "rpc": {
+          "enabled": true,
+          "directory": "app/rpc",
+          "declareTo": "Context.rpc"
+        }
+      }
+    }
   },
   "dependencies": {
     "egg": "^2.21.1",

@@ -12,4 +12,8 @@ module.exports = {
     enable: true,
     path: path.join(__dirname, '../lib/plugin/share'),
   },
+  myLoader: {
+    enable: true,
+    path: path.join(__dirname, '../lib/plugin/loader'),
+  },
 };
