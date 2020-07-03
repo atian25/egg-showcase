@@ -1,0 +1,6 @@
+{
+  "name": "my-loader",
+  "eggPlugin": {
+    "name": "myLoader"
+  }
+}
