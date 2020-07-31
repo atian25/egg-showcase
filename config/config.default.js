@@ -30,6 +30,10 @@ module.exports = appInfo => {
     },
   };
 
+  config.multipart = {
+    fileExtensions: [ '.txt' ],
+  };
+
   // add your middleware config here
   config.middleware = [];
 
