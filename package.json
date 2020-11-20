@@ -24,6 +24,11 @@
   "engines": {
     "node": ">=10.0.0"
   },
+  "bin": "bin/index.js",
+  "pkg": {
+    "assets": [ "app/view/**/*", "./package.json" ],
+    "scripts": [ "app/**/*.js", "app/*.js", "config/*.js", "config/**/*.js", "app.js" ]
+  },
   "scripts": {
     "start": "egg-scripts start --daemon --title=egg-server-showcase",
     "stop": "egg-scripts stop --title=egg-server-showcase",
