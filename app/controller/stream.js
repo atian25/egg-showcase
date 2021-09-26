@@ -15,9 +15,12 @@ class StreamController extends Controller {
 
     fs.createReadStream(__filename)
       .pipe(zlib.createGunzip())
-      // 1. 有 error 事件侦听，pipe 阶段出错仍会导致进程卡住
+      // 1. 有 error 事件侦听，出错后中断流输出即可，客户端只接受到已经传输的数据
       // 2. 如果没有这个 error 事件侦听，app worker died
-      .on('error', err => ctx.logger.error(`pipe failed: ${err}`))
+      .on('error', err => {
+        ctx.logger.error(`pipe failed: ${err}`);
+        pass.end();
+      })
       .pipe(pass);
 
     ctx.body = pass;
